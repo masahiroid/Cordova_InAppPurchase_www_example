@@ -1,4 +1,4 @@
-# masahiroid-Cordova_InAppPurchase_www_example
+# Cordova_InAppPurchase_www_example
 
 __「index.js」の「アイテムID」だけは、変更しないと機能しない。__
 
