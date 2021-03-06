@@ -1456,11 +1456,39 @@ function __btn_s_04() {
 __sprite_init__(this, btn_s_04, 40, 40, 20, 20, 'Box', 20, 0, 40, 0, 40, ['img/btn_s_04_0.png']);
 }; var btn_s_04 = new __btn_s_04();
 
+function __sprite_91() { 
+__sprite_init__(this, sprite_91, 80, 40, 40, 20, 'Box', 40, 0, 80, 0, 40, ['img/sprite_91_0.png']);
+}; var sprite_91 = new __sprite_91();
+
+function __sprite_92() { 
+__sprite_init__(this, sprite_92, 80, 40, 40, 20, 'Box', 40, 0, 80, 0, 40, ['img/sprite_92_0.png']);
+}; var sprite_92 = new __sprite_92();
+
+function __sprite_102() { 
+__sprite_init__(this, sprite_102, 80, 40, 40, 20, 'Box', 40, 0, 80, 0, 40, ['img/sprite_102_0.png']);
+}; var sprite_102 = new __sprite_102();
+
+function __sprite_106() { 
+__sprite_init__(this, sprite_106, 80, 40, 40, 20, 'Box', 40, 0, 80, 0, 40, ['img/sprite_106_0.png']);
+}; var sprite_106 = new __sprite_106();
+
+function __sprite_120() { 
+__sprite_init__(this, sprite_120, 40, 40, 20, 20, 'Box', 20, 0, 40, 0, 40, ['img/sprite_120_0.png']);
+}; var sprite_120 = new __sprite_120();
+
+function __sprite_121() { 
+__sprite_init__(this, sprite_121, 40, 40, 20, 20, 'Box', 20, 0, 40, 0, 40, ['img/sprite_121_0.png']);
+}; var sprite_121 = new __sprite_121();
+
 
 
 /***********************************************************************
  * SOUNDS
  ***********************************************************************/
+function __snd_1() { 
+__audio_init__(this, snd_1, '', 'aud/btn_on.mp3', '');
+}; var snd_1 = new __snd_1();
+
 
 
 /***********************************************************************
@@ -1476,9 +1504,6 @@ __sprite_init__(this, btn_s_04, 40, 40, 20, 20, 'Box', 20, 0, 40, 0, 40, ['img/b
 /***********************************************************************
  * FONTS
  ***********************************************************************/
-function __font_90() { 
-__font_init__(this, font_90, 'Arial', 14, 1, 0)}; var font_90 = new __font_90();
-
 
 
 /***********************************************************************
@@ -1571,6 +1596,8 @@ this.other = this.place_meeting(this.x, this.y, object_box_02);
 if(this.other != null) {
 onDeviceReady();
 
+
+
 }
 }
 };
@@ -1625,8 +1652,88 @@ this.on_animationend = on_animationend_i;
 this.on_draw = on_draw_i;
 }; var object_box_02 = new __object_box_02();
 
-function __object_88() {
-__instance_init__(this, object_88, null, 1, 0, null, 1, 69);
+function __object_93() {
+__instance_init__(this, object_93, null, 1, 0, sprite_91, 1, 69);
+this.on_creation = on_creation_i;
+this.on_destroy = on_destroy_i;
+this.on_step = function() {
+with(this) {
+if(mouse_check_pressed() && position_meeting(mouse_x, mouse_y, object_93)) {
+	sound_play(snd_1);
+	room_goto_next();
+	}
+}
+};
+this.on_end_step = on_end_step_i;
+this.on_collision = on_collision_i;
+this.on_roomstart = on_roomstart_i;
+this.on_roomend = on_roomend_i;
+this.on_animationend = on_animationend_i;
+this.on_draw = on_draw_i;
+}; var object_93 = new __object_93();
+
+function __object_95() {
+__instance_init__(this, object_95, null, 1, 0, sprite_92, 1, 70);
+this.on_creation = on_creation_i;
+this.on_destroy = on_destroy_i;
+this.on_step = function() {
+with(this) {
+if(mouse_check_pressed() && position_meeting(mouse_x, mouse_y, object_95)) {
+	sound_play(snd_1);
+	finishPurchase();
+	}
+}
+};
+this.on_end_step = on_end_step_i;
+this.on_collision = on_collision_i;
+this.on_roomstart = on_roomstart_i;
+this.on_roomend = on_roomend_i;
+this.on_animationend = on_animationend_i;
+this.on_draw = on_draw_i;
+}; var object_95 = new __object_95();
+
+function __object_103() {
+__instance_init__(this, object_103, null, 1, 0, sprite_102, 1, 73);
+this.on_creation = on_creation_i;
+this.on_destroy = on_destroy_i;
+this.on_step = function() {
+with(this) {
+if(mouse_check_pressed() && position_meeting(mouse_x, mouse_y, object_103)) {
+	sound_play(snd_1);
+	refreshUI();
+	}
+}
+};
+this.on_end_step = on_end_step_i;
+this.on_collision = on_collision_i;
+this.on_roomstart = on_roomstart_i;
+this.on_roomend = on_roomend_i;
+this.on_animationend = on_animationend_i;
+this.on_draw = on_draw_i;
+}; var object_103 = new __object_103();
+
+function __object_107() {
+__instance_init__(this, object_107, null, 1, 0, sprite_106, 1, 75);
+this.on_creation = on_creation_i;
+this.on_destroy = on_destroy_i;
+this.on_step = function() {
+with(this) {
+if(mouse_check_pressed() && position_meeting(mouse_x, mouse_y, object_107)) {
+	sound_play(snd_1);
+	onDeviceReady();
+	}
+}
+};
+this.on_end_step = on_end_step_i;
+this.on_collision = on_collision_i;
+this.on_roomstart = on_roomstart_i;
+this.on_roomend = on_roomend_i;
+this.on_animationend = on_animationend_i;
+this.on_draw = on_draw_i;
+}; var object_107 = new __object_107();
+
+function __HAD() {
+__instance_init__(this, HAD, null, 1, 0, null, 1, 77);
 this.on_creation = on_creation_i;
 this.on_destroy = on_destroy_i;
 this.on_step = on_step_i;
@@ -1639,19 +1746,77 @@ this.on_draw = function() {
 if (this.visible == 1) {
 __handle_sprite__(this);
 with(this) {
-draw_set_font(font_90);
-draw_text( 10, 40, "赤のブロックに当てると、内課金の画面に・・・");
+draw_text(room_viewport_x + 20, room_viewport_y + 60, "JumpStep: " + jump_step);
+
+draw_text(room_viewport_x + 120, room_viewport_y + 60, "goldCoins: " + goldCoins);
 }
 }
 };
-}; var object_88 = new __object_88();
+}; var HAD = new __HAD();
+
+function __object_122() {
+__instance_init__(this, object_122, null, 1, 0, sprite_120, 1, 79);
+this.on_creation = on_creation_i;
+this.on_destroy = on_destroy_i;
+this.on_step = function() {
+with(this) {
+if(mouse_check_pressed() && position_meeting(mouse_x, mouse_y, object_122)) {
+	sound_play(snd_1);
+	purchase();
+	}
+}
+};
+this.on_end_step = on_end_step_i;
+this.on_collision = on_collision_i;
+this.on_roomstart = on_roomstart_i;
+this.on_roomend = on_roomend_i;
+this.on_animationend = on_animationend_i;
+this.on_draw = on_draw_i;
+}; var object_122 = new __object_122();
+
+function __object_123() {
+__instance_init__(this, object_123, null, 1, 0, sprite_121, 1, 80);
+this.on_creation = on_creation_i;
+this.on_destroy = on_destroy_i;
+this.on_step = function() {
+with(this) {
+if(mouse_check_pressed() && position_meeting(mouse_x, mouse_y, object_123)) {
+	sound_play(snd_1);
+	store.get('com.store.item_002');
+	}
+}
+};
+this.on_end_step = on_end_step_i;
+this.on_collision = on_collision_i;
+this.on_roomstart = on_roomstart_i;
+this.on_roomend = on_roomend_i;
+this.on_animationend = on_animationend_i;
+this.on_draw = on_draw_i;
+}; var object_123 = new __object_123();
 
 
 
 /***********************************************************************
  * SCENES
  ***********************************************************************/
-function __test_level() { 
+function __rooms_01() { 
+this.tiles = [
+];
+this.objects = [
+[{o:object_93, x:160, y:140}],
+[{o:object_95, x:160, y:200}],
+[{o:object_103, x:160, y:260}],
+[{o:object_107, x:160, y:320}],
+[{o:HAD, x:160, y:80}],
+[{o:object_122, x:80, y:260}],
+[{o:object_123, x:240, y:260}]];
+this.start = function() {
+__room_start__(this, rooms_01, 320, 480, 30, 255, 128, 0, null, 0, 0, 0, 320, 480, null, 50, 50);
+};
+}
+var rooms_01 = new __rooms_01();
+tu_scenes.push(rooms_01);
+function __rooms_02() { 
 this.tiles = [
 ];
 this.objects = [
@@ -1720,61 +1885,57 @@ this.objects = [
 [{o:object_box_02, x:150, y:310}],
 [{o:object_box_02, x:170, y:310}],
 [{o:object_box_02, x:190, y:310}],
-[{o:object_box_02, x:10, y:170}],
-[{o:object_88, x:160, y:340}]];
+[{o:object_box_02, x:10, y:170}]];
 this.start = function() {
-__room_start__(this, test_level, 320, 480, 60, 46, 90, 65, null, 0, 0, 0, 320, 480, obj_player, 50, 0);
+__room_start__(this, rooms_02, 320, 480, 60, 46, 90, 65, null, 0, 0, 0, 320, 480, obj_player, 50, 0);
 };
 }
-var test_level = new __test_level();
-tu_scenes.push(test_level);
-tu_room_to_go = test_level;
+var rooms_02 = new __rooms_02();
+tu_scenes.push(rooms_02);
+tu_room_to_go = rooms_01;
 
 
 /***********************************************************************
  * CUSTOM GLOBAL VARIABLES
  ***********************************************************************/
 jump_step = 0;
-
 goldCoins = 0;
+
+//product = store.get('com.store.item_002');
+button = `<button onclick="store.order('com.store.item_002')">Purchase</button>`;
+button_2 = `<button onclick="store.order('com.store.item_002')">Purchase</button>`;
+
 
 /***********************************************************************
  * CUSTOM GLOBAL FUNCTIONS
  ***********************************************************************/
-//document.addEventListener('deviceready', onDeviceReady);
 
-function onDeviceReady() {
-  store.when('com.cordova.store.item_002')
+function onDeviceReady() { 
+  store.when('com.store.item_002')
     .updated(refreshUI)
     .approved(finishPurchase);
-  store.register({type: store.CONSUMABLE, id: 'com.cordova.store.item_002'});
+  store.register({type: store.NON_CONSUMABLE, id: 'com.store.item_002'});
   store.refresh();
 }
-
-function finishPurchase(p) {
+function finishPurchase(p) { 
   localStorage.goldCoins = (localStorage.goldCoins | 0) + 10;
   p.finish();
 }
-
-function refreshUI() {
-  const product = store.get('com.cordova.store.item_002');
-  const button = `<button onclick="store.order('com.cordova.store.item_002')">Purchase</button>`;
-
-  document.getElementsByTagName('body')[0].innerHTML = `
-  <div>
-  <pre>
-  Gold: ${localStorage.goldCoins | 0 } 
-
-  Product.state: ${product.state}
-  .title: ${product.title}
-  .descr: ${product.description}
-  .price: ${product.price}
-
-  </pre>
-  ${product.canPurchase ? button : ''}
-  </div>`;
+function refreshUI() { 
+  const info = product.loaded
+  ? `<h1>${product.title}</h1>` +
+    `<p>${product.description}</p>` +
+    `<p>${product.price}</p>`
+  : '<p>Retrieving info...</p>';
+  const button = product.canPurchase
+  ? '<button onclick="purchasenonconsumable1()">Buy Now!</button>'
+  : '';
+  const el = document.getElementById('com.store.item_002');
+  el.innerHTML = info + button;
 }
-
+function purchase() { 
+store.order('com.store.item_002');
+}
 
 
 tu_gameloop = tu_loop;

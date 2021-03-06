@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><tululoo_functions version="130" author="" description=""><fns count="4"><fn name="onDeviceReady" params="" description="">  store.when('com.store.item_002')
+    .updated(refreshUI)
+    .approved(finishPurchase);
+    store.register({type: store.NON_CONSUMABLE, id: 'com.store.item_002'});
+    store.refresh();</fn><fn name="finishPurchase" params="p" description="">  localStorage.goldCoins = (localStorage.goldCoins | 0) + 10;
+    p.finish();</fn><fn name="refreshUI" params="" description="">  const info = product.loaded
+    ? `&lt;h1&gt;${product.title}&lt;/h1&gt;` +
+    `&lt;p&gt;${product.description}&lt;/p&gt;` +
+    `&lt;p&gt;${product.price}&lt;/p&gt;`
+    : '&lt;p&gt;Retrieving info...&lt;/p&gt;';
+    const button = product.canPurchase
+    ? '&lt;button onclick="purchasenonconsumable1()"&gt;Buy Now!&lt;/button&gt;'
+    : '';
+    const el = document.getElementById('com.store.item_002');
+    el.innerHTML = info + button;</fn><fn name="purchase" params="" description="">store.order('com.store.item_002');</fn></fns></tululoo_functions>
