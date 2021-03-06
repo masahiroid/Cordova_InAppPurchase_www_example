@@ -13,4 +13,6 @@ __「game.js」一番下の「CUSTOM GLOBAL FUNCTIONS」に、「アイテムID�
 
 > http://www.tululoo.com/
 
+## 表示できている。
+
 <center><img border="0" width="25%" height="25%" alt="" src="https://kanamesolutions.com/github_img/Screenshot_20210306-124610.png"></center>
